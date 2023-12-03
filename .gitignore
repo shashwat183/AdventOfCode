@@ -1,3 +1,5 @@
 *.class
 .idea/
 Solutions.md
+*.iml
+launch.json
