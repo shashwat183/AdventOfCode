@@ -38,7 +38,6 @@ func solve2(data [][]rune) (int, error) {
 				if err != nil {
 					return 0, err
 				}
-				// fmt.Println(ratio)
 				result += ratio
 			}
 		}
@@ -47,8 +46,6 @@ func solve2(data [][]rune) (int, error) {
 }
 
 func gearRatio(data [][]rune, r, c int) (int, error) {
-	// fmt.Println("----------")
-	// fmt.Println(r, c)
 	nums := make([]int, 0)
 	if r > 0 {
 		if unicode.IsDigit(data[r-1][c]) {
@@ -118,17 +115,13 @@ func gearRatio(data [][]rune, r, c int) (int, error) {
 
 	}
 	if len(nums) == 2 {
-		printAround(data, r, c)
-		fmt.Println(nums)
 		return nums[0] * nums[1], nil
 	}
 	return 0, nil
 }
 
-// for any r,c parse and return the number at that point in the row
+// for any r,c parse and return the whole number at that point in the row
 func getNum(data [][]rune, r, c int) (int, error) {
-	// fmt.Printf("getNum called for %v, %v\n", r, c)
-	// fmt.Println(string(data[r]))
 	for c > -1 && unicode.IsDigit(data[r][c]) {
 		c--
 	}
@@ -139,7 +132,6 @@ func getNum(data [][]rune, r, c int) (int, error) {
 		numStr += string(data[r][c])
 		c++
 	}
-	// fmt.Println(numStr)
 	return strconv.Atoi(numStr)
 }
 
