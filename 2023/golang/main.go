@@ -1,10 +1,13 @@
 package main
 
-import "2023-aoc-golang/day3"
+import (
+	"2023-aoc-golang/day4"
+)
+
 
 
 func main() {
-	err := day3.Solution2()
+	err := day4.Solution2()
 	if err != nil {
 		panic(err)
 	}
