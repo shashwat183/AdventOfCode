@@ -1,5 +1,6 @@
-*.class
+input.txt
+testinput.txt
 .idea/
-Solutions.md
+*.class
 *.iml
-launch.json
+.vscode/
